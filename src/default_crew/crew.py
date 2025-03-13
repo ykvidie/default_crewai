@@ -38,13 +38,15 @@ class DefaultCrew():
 	def research_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['research_task'],
+			human_input=True,
 		)
 
 	@task
 	def reporting_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			output_file='report.md',
+			human_input=True,
 		)
 
 	@crew
